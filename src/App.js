@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 import axios from "axios";
+import Question1 from "./components/Question1";
+import Question2 from "./components/Question2"
 
 let maergery = "characters/16";
 let houseTargaryen = "houses/378";
@@ -74,9 +76,12 @@ findInfo = () => {
   render() {
     console.log(`this is the data`, this.state.data)
     return (
-      <div>
-        <h1>Lord of the north</h1>
-        <h2></h2>
+      <div className="parent">
+        <h1>Now selling unparalleled resumes for $10!!!!</h1>
+        <h2>
+          <Question1 />
+          <Question2 />
+        </h2>
       </div>
     )
   }
