@@ -52,15 +52,16 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    axios.get(`http://anapioficeandfire.com/api/${maergery}`)
+    axios.get(`http://anapioficeandfire.com/api/${Question[0].maergery}`)
     .then(response => {
       const gotData = response.data.born;
       this.setState({
         data: gotData
       })
+      return gotData
     })
 .catch(err => console.log(`"there's an error ${err}`))
-  
+  }
 
 findInfo = () => {
   if (this.state.data) {
@@ -75,7 +76,7 @@ findInfo = () => {
     return (
       <div>
         <h1>Lord of the north</h1>
-        <h2>${findInfo}</h2>
+        <h2>{this.componentDidMount()}</h2>
       </div>
     )
   }
