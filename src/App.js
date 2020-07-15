@@ -12,11 +12,11 @@ let CatelynnBooks = "characters/232"
 
 
 class App extends React.Component {
-  constructor() {
-    super ()
+  constructor(props) {
+    super (props)
 
     this.state = {
-      data: [],
+      data: [props],
       Question: [
         {
           Question: "Where was Margaery Tyrell born?",
@@ -52,13 +52,13 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    axios.get(`http://anapioficeandfire.com/api/${Question[0].maergery}`)
+    axios.get(`http://anapioficeandfire.com/api/${maergery}`)
     .then(response => {
       const gotData = response.data.born;
       this.setState({
         data: gotData
       })
-      return gotData
+
     })
 .catch(err => console.log(`"there's an error ${err}`))
   }
@@ -76,7 +76,7 @@ findInfo = () => {
     return (
       <div>
         <h1>Lord of the north</h1>
-        <h2>{this.componentDidMount()}</h2>
+        <h2></h2>
       </div>
     )
   }
