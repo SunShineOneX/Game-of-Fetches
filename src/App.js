@@ -2,7 +2,12 @@ import React from 'react';
 import './App.css';
 import axios from "axios";
 import Question1 from "./components/Question1";
-import Question2 from "./components/Question2"
+import Question2 from "./components/Question2";
+import Question3 from "./components/Question3";
+import Question4 from "./components/Question4";
+import Question5 from "./components/Question5";
+import Question6 from "./components/Question6";
+import Question7 from "./components/Question7";
 
 let maergery = "characters/16";
 let houseTargaryen = "houses/378";
@@ -81,6 +86,11 @@ findInfo = () => {
         <h2>
           <Question1 />
           <Question2 />
+          <Question3 />
+          <Question4 />
+          <Question5 />
+          <Question6 />
+          <Question7 />
         </h2>
       </div>
     )

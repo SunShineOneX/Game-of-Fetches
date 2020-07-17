@@ -3,7 +3,6 @@ import axios from "axios";
 const URL = "https://anapioficeandfire.com/api/";
 
 
-
 class Question1 extends React.Component {
 
     constructor(props) {
